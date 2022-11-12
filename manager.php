@@ -298,10 +298,10 @@ include_once("connect.php");
                                 <td id="table"><?=$row['quantity']?></td>
                                 <td id="table"><?=$row['categoryid']?></td>
                                 <td>
-                                    <a href="update.php?id=<?=$row['p_id']?>" class="btn btn-warning rounded-pill">Update</a> 
+                                    <a href="update.php?id=<?=$row['productid']?>" class="btn btn-warning rounded-pill">Update</a> 
                                 </td>
                                 <td>
-                                    <a href="delete.php?id=<?=$row['p_id']?>" class="btn btn-warning rounded-pill">Delete</a> 
+                                    <a href="delete.php?id=<?=$row['productid']?>" class="btn btn-warning rounded-pill">Delete</a> 
                                 </td>
                             </tr>
                             <?php

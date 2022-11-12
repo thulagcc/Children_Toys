@@ -17,8 +17,4 @@ $conn = pg_connect("postgres://kpxccmyoqzkujz:cdc818481992e58d6b88fa62b490c7c922
 if (!$conn) {
     die("Connection failed");
 }
-
-if ($conn){
-    echo "connected";
-}
 ?>

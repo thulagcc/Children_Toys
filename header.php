@@ -1,9 +1,3 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <?php
 include_once("connect.php");
 ?>
@@ -46,7 +40,16 @@ include_once("connect.php");
 	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
 	    rel="stylesheet">
 	<!-- //web fonts -->
-
+        <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -252,38 +255,5 @@ include_once("connect.php");
 		</div>
 	</div>
 	<!-- //page -->
-	<div class="container mt-3">
-  <h2>All Products</h2>
-  <div class="row">
-    <?php
-    include_once("connect.php");
-    $sql = "select * from product";
-    $re = pg_query($conn, "SELECT * FROM product");
-    while( $row = pg_fetch_array($re)){
-    ?>
-      <div class="col-md-4">
-            <div class="card">
-                <img
-                src="images/<?=$row['inmage']?>"
-                class="card-img-top"
-                alt="<?=$row['productname']?>" style="margin: auto;
-    width: max-content;" height="250px"
-                />
-                <div class="card-body">
-                <a href="detail.php?id=<?=$row['productid']?>" class="text-decoration-none">
-                <h5 class="card-title"><?=$row['productname']?></h5></a>
-                <h6 class="card-subtitle mb-2 text-muted"><span>&#36;</span><?=$row['price']?></h6>
-                <a href="cart.php?id=<?=$row['productid']?>" 
-                class="btn btn-primary">Add to Cart</a>
-                </div>
-            </div>
-      </div>
-      <?php
-    }
-      ?>
-  </div>
+
 </div>
-
-</body>
-
-</html>
