@@ -4,6 +4,9 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php
+include_once("connect.php");
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -288,12 +291,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 while($row = pg_fetch_assoc($rel1) ) {
                             ?>
                             <tr id="table">
-                                <td id="table"><?=$row['p_id']?></td>
-                                <td id="table"><?=$row['p_name']?></td>
-                                <td id="table"><?=$row['p_price']?></td>
-                                <td style="text-align: left;"  id="table"><?=$row['DetailDesc']?></td>
-                                <td id="table"><?=$row['p_quantity']?></td>
-                                <td id="table"><?=$row['cat_id']?></td>
+                                <td id="table"><?=$row['productid']?></td>
+                                <td id="table"><?=$row['productname']?></td>
+                                <td id="table"><?=$row['price']?></td>
+                                <td style="text-align: left;"  id="table"><?=$row['description']?></td>
+                                <td id="table"><?=$row['quantity']?></td>
+                                <td id="table"><?=$row['categoryid']?></td>
                                 <td>
                                     <a href="update.php?id=<?=$row['p_id']?>" class="btn btn-warning rounded-pill">Update</a> 
                                 </td>
