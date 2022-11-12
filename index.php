@@ -174,7 +174,7 @@ include_once("connect.php");
 				<div class="col-md-3 logo_agile">
 					<h1 class="text-center">
 						<a href="index.php" class="font-weight-bold font-italic">
-							<img src="images/logo2.png" alt="  " class="img-fluid"> Watch Store
+							<img src="images/logo2.png" alt="  " class="img-fluid"> Toy Store
 						</a>
 					</h1>
 				</div>
